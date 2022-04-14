@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+:root {
+  --p-light-cyan: #d5e3ee;
+  --neon-green: hsl(150, 100%, 66%);
+  --grayish-blue: #313a49;
+  --dark-grayish-blue: #202632;
+
+  --quote-fs: 28px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Manrope;
+  background-color: var(--dark-grayish-blue);
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  background-color: var(--grayish-blue);
+  padding: 45px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 545px;
+}
+
+@media (max-width: 767px) {
+  section {
+    width: 470px;
+    padding: 25px;
+  }
+}
+
+section > div {
+  height: 20px;
+  width: 100%;
+  background-image: url(./images/pattern-divider-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-bottom: 30px;
+}
+@media (max-width: 767px) {
+  section > div {
+    background-image: url(./images/pattern-divider-mobile.svg);
+    background-size: 100%;
+    margin-bottom: 40px;
+    height: 24px;
+  }
+}
+
+.advice-num {
+  color: var(--neon-green);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.advice-text {
+  color: var(--p-light-cyan);
+  font-size: var(--quote-fs);
+  text-align: center;
+  margin: 28px 0 40px;
+}
+
+button {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--neon-green);
+  position: absolute;
+  bottom: calc(-65px / 2);
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.attribution {
+  font-size: 17px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  color: var(--p-light-cyan);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
